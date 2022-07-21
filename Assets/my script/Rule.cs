@@ -30,6 +30,9 @@ public class Rule : MonoBehaviour
     [SerializeField] int _DamageNormal = 1;
     [SerializeField] int _DamageCharge = 4;
     [SerializeField] int _DamageDefence = 1;
+
+    Janken _player1 = Janken.Normal;
+    Janken _player2 = Janken.Normal;
     // Start is called before the first frame update
     void Start()
     {
@@ -356,5 +359,15 @@ public class Rule : MonoBehaviour
             SceneManager.LoadScene("Player1Win");
         }
     }
+}
+enum Janken
+{
+    Normal,
+    Gu,
+    Tyoki,
+    Pa,
+    Charge,
+    ChargeAtack,
+    ChargeDefence
 }
 
