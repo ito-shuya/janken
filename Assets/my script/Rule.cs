@@ -17,8 +17,7 @@ public class Rule : MonoBehaviour
     GameObject _Charge1 = null;
     GameObject _Charge2 = null;
 
-    GameObject _Log = null;
-
+    GameObject _Log = null;//SerializeFieldにしてないのは状況に応じてLogを変えてるからです。
 
     [SerializeField] int _ScoreNum1 = 10;
     [SerializeField] int _ScoreNum2 = 10;
@@ -360,7 +359,7 @@ public class Rule : MonoBehaviour
         }
     }
 }
-enum Janken
+enum Janken //enum追加してみたのですが、enumにするとコードが長くなりそうでいらないのではと、思ってます。
 {
     Normal,
     Gu,
